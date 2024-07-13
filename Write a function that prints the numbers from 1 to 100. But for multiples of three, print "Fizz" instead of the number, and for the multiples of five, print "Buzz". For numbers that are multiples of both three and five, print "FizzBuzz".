@@ -1,0 +1,22 @@
+// creating function
+function fizzBuzz() {
+    //printing number till 100
+    for (let i = 1; i <= 100; i++) {
+        // if i % 3*5 = 0, prints Fizz
+        if (i % 15 === 0) {
+            console.log("FizzBuzz");
+            // if i % 5 = 0, prints Buzz
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+            // if i % 3 = 0, prints Fizz
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+            // if non condition evaluates, prints number
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+// call the function
+fizzBuzz();
