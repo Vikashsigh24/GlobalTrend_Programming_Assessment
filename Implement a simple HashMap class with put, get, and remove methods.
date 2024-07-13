@@ -1,0 +1,39 @@
+class HashMap {
+    constructor() {
+        this.map = {};
+    }
+
+    // method to add a key and value to the HashMap
+    put(key, value) {
+        this.map[key] = value;
+    }
+
+    // method to get the value associated with a key
+    get(key) {
+        if (this.map.hasOwnProperty(key)) {
+            return this.map[key];
+        }
+        return undefined;
+    }
+
+    // method to remove a key and value from the HashMap
+    remove(key) {
+        if (this.map.hasOwnProperty(key)) {
+            delete this.map[key];
+        }
+    }
+}
+
+// assigning key and value by creating object of HashMap
+const myHashMap = new HashMap();
+myHashMap.put('name', 'John');
+myHashMap.put('age', 30);
+
+//printing value
+console.log(myHashMap.get('name'));
+console.log(myHashMap.get('age'));
+
+// removing key
+myHashMap.remove('age');
+console.log(myHashMap.get('age'));
+
