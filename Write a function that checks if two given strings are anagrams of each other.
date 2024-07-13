@@ -1,0 +1,28 @@
+function Anagrams(str1, str2) {
+    // remove any whitespace and convert the strings to lowercase for case-insensitive comparison
+    str1 = str1.replace(/\s+/g, '').toLowerCase();
+    str2 = str2.replace(/\s+/g, '').toLowerCase();
+
+    // check if the lengths are different
+    if (str1.length !== str2.length) {
+        return false;
+    }
+
+    // sort the characters in both strings and compare them
+    const sortedStr1 = str1.split('').sort().join('');
+    const sortedStr2 = str2.split('').sort().join('');
+
+    return sortedStr1 === sortedStr2;
+}
+
+// assigning value in variables
+let string1 = "Care";
+let string2 = "Race";
+
+// comparing two values and displaying result
+if (Anagrams(string1, string2)) {
+    console.log(`${string1} and ${string2} are anagrams.`);
+} else {
+    console.log(`${string1} and ${string2} are not anagrams.`);
+}
+
