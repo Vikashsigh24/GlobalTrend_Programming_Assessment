@@ -1,0 +1,10 @@
+// creating a function that remove duplicates from an array
+function removeDuplicates(arr) {
+    //passing  return value as set
+    return [...new Set(arr)];
+}
+
+// assigning value and calling funcition
+let arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5, 5, 5];
+let uniqueArray = removeDuplicates(arrayWithDuplicates);
+console.log(uniqueArray);
