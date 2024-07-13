@@ -1,0 +1,16 @@
+// creating a function that takes string value
+function capitalizeWords(str) {
+    return str.split(' ').map(word =>
+
+        // gets the first character of the word and converts it to uppercasex
+        word.charAt(0).toUpperCase() + word.slice(1)
+
+        // joins the array of words back into a single string with spaces
+    ).join(' ');
+}
+
+// assigning value and calling function
+let inputString = "title text here";
+let capitalizedString = capitalizeWords(inputString);
+console.log(capitalizedString);
+
